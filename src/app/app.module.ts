@@ -12,6 +12,8 @@ import { PaisesComponent } from './components/paises/paises.component';
 import { PaisesService } from './paises.service';
 import { PostComponent } from './components/post/post.component';
 import { PostService } from './post.service';
+import { AlbumsComponent } from './components/albums/albums.component';
+import {AlbumsService} from './albums.service';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,14 @@ import { PostService } from './post.service';
     FooterComponent,
     RegistroComponent,
     PaisesComponent,
-    PostComponent
+    PostComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [PostService],
+  providers: [AlbumsService],
 
   bootstrap: [AppComponent]
 })
