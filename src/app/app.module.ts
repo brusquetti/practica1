@@ -7,18 +7,27 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegistroComponent } from './components/registro/registro.component';
 
+import {HttpClientModule} from '@angular/common/http';
+import { PaisesComponent } from './components/paises/paises.component';
+import { PaisesService } from './paises.service';
+import { PostComponent } from './components/post/post.component';
+import { PostService } from './post.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RegistroComponent
+    RegistroComponent,
+    PaisesComponent,
+    PostComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PostService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
